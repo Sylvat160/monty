@@ -3,8 +3,8 @@
 /**
  * _pall - prints all the values on the stack,
  * starting from the top of the stack
- * @stack: pointer to the stack
- * @line_number: line number
+ * @head: pointer to the stack
+ * @number: line number
  * Return: void
  */
 
