@@ -13,17 +13,23 @@ int main(int ac, char **av)
 {
 help_t *main_s = NULL;
 instruction_t ops[] = {
-{"push", _push_},
-{"pall", _pall_},
-{"pint", _pint_},
-{"pop", _pop_},
-{"swap", _swap_},
-{"add", _add_},
-{"nop", _nop_},
-{"sub", _sub_},
-{"div", _div_},
-{"mul", _mul_},
-{"mod", _mod_},
+{"push", push_o},
+{"pall", pall_o},
+{"pint", pint_o},
+{"pop", pop_o},
+{"swap", swap_o},
+{"add", add_o},
+{"nop", nop_o},
+{"sub", sub_o},
+{"div", div_o},
+{"mul", mul_o},
+{"mod", mod_o},
+{"pstr", pstr_o},
+{"rotl", rotl_o},
+{"pchar", pchar_o},
+{"rotr", rotr_o},
+{"stack", stack_o},
+{"queue", queue_o},
 {NULL, NULL}
 }
 
