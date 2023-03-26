@@ -86,10 +86,51 @@ FILE *file;
 extern inventory_t *inventory;
 inventory_t *inventory;
 
-void _push(stack_t **stack, unsigned int line_number);
-void _pall(stack_t **stack, unsigned int line_number);
-void free_stack(stack_t *stack);
-// void execute_function(stack_t **stack, char *opcode, unsigned int line_number);
-void execute_funct(char *filename, stack_t **stack);
+
+/********** push_pall.c ************/
+void _push_(stack_t **stack, unsigned int line_number);
+void _pall_(stack_t **stack, unsigned int line_number);
+
+/********** error.c ************/
+void error_handler(int num);
+
+/********** inventory.c ************/
+int _inventory_(void);
+
+/********** opcode.c ************/
+void (*opcode_matcher(void))(stack_t **stack, unsigned int line_number);
+
+/********** parser.c ************/
+int line_parser(char *line);
+
+/********** digits.c ************/
+int _isdigit_(char *num);
+
+/********** pint.c ************/
+void _pint_(stack_t **stack, unsigned int line_number);
+
+/********** pop.c ************/
+void _pop_(stack_t **stack, unsigned int line_number);
+
+/********** swap.c ************/
+void _swap_(stack_t **stack, unsigned int line_number);
+
+/********** add.c ************/
+void _add_(stack_t **stack, unsigned int line_number);
+
+/********** sub.c ************/
+void _sub_(stack_t **stack, unsigned int line_number);
+
+/********** div.c ************/
+void _div_(stack_t **stack, unsigned int line_number);
+
+/********** mul.c ************/
+void _mul_(stack_t **stack, unsigned int line_number);
+
+/********** nop.c ************/
+void _nop_(stack_t **stack, unsigned int line_number);
+
+/********** mod.c ************/
+void _mod_(stack_t **stack, unsigned int line_number);
 
 #endif
