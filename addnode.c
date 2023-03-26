@@ -6,7 +6,6 @@
  * @head: pointer to the head of the list
  * @n: integer to be added to the list
  * Return: void
- * 
  */
 
 void add_node(stack_t **head, int n)

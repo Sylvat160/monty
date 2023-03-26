@@ -1,6 +1,5 @@
 #include "monty.h"
 
-help_t *main_s = NULL;
 
 /**
  * main - entry point
@@ -12,6 +11,7 @@ help_t *main_s = NULL;
 
 int main(int ac, char **av)
 {
+help_t *main_s = NULL;
 instruction_t ops[] = {
 {"push", _push_},
 {"pall", _pall_},
@@ -42,7 +42,7 @@ exit(EXIT_FAILURE);
 main_s->fp = fopen(av[1], "r");
 if (!main_s->fp)
 {
-file_err(av[1]);
+file_error(av[1]);
 }
 main_s->push_n = NULL;
 main_s->buff = NULL;
@@ -51,3 +51,4 @@ main_s->data = 1;
 main_loop(ops);
 return (0);
 }
+
